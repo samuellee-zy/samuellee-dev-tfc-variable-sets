@@ -14,3 +14,12 @@ resource "tfe_variable" "samueleezy-aws-secret-access-key" {
   sensitive       = true
   variable_set_id = tfe_variable_set.samueleezy-aws-variable-set.id
 }
+
+resource "tfe_variable" "user-api-token" {
+  key             = "TFE_TOKEN"
+  value           = "INSERT API TOKEN HERE"
+  category        = "env"
+  description     = "API Token for accessing TFC org"
+  sensitive       = true
+  variable_set_id = tfe_variable_set.samuellee-dev-tfe-token.id
+}
