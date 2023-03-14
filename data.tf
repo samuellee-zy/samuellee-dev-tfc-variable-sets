@@ -9,5 +9,5 @@ data "tfe_workspace" "aws-doormat-workspace" {
 }
 
 data "tfe_variables" "aws-doormat-variables" {
-  workspace_id = data.tfe_workspace.test.id
+  workspace_id = var.aws-doormat-workspace-id
 }

@@ -1,5 +1,5 @@
 output "samuellee-dev-aws-variable-set" {
-  value = tfe_variable_set.samueleezy-aws-variable-set.id
+  value = tfe_variable_set.samuellee-dev-aws-variable-set
 }
 
 output "samuellee-dev-tfe-token" {

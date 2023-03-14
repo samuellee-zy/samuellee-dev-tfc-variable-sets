@@ -3,7 +3,7 @@ resource "tfe_variable" "samueleezy-aws-access-key-id" {
   value           = "INSERT-ACCESS-KEY-ID-HERE"
   category        = "env"
   description     = "Access Key ID for AWS account"
-  variable_set_id = tfe_variable_set.samueleezy-aws-variable-set.id
+  variable_set_id = tfe_variable_set.sa
 }
 
 resource "tfe_variable" "samueleezy-aws-secret-access-key" {
