@@ -13,5 +13,5 @@ data "tfe_variables" "aws-doormat-variables" {
 }
 
 locals {
-  access_key         = data.tfe_variables.aws-doormat-variables.variables
+  access_key         = (data.tfe_variables.aws-doormat-variables.variables)["AWS_ACCESS_KEY_ID"]
 }
