@@ -1,6 +1,6 @@
 resource "tfe_variable" "samueleezy-aws-access-key-id" {
   key             = "AWS_ACCESS_KEY_ID"
-  value           = data.tfe_workspace.aws-doormat-workspace.variables
+  value           = "TEST"
   category        = "env"
   description     = "Access Key ID for AWS account"
   variable_set_id = tfe_variable_set.samuellee-dev-aws-variable-set.id
