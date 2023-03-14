@@ -7,5 +7,6 @@ output "samuellee-dev-tfe-token" {
 }
 
 output "samuellee-dev-env" {
-  value = data.tfe_variables.aws-doormat-variables.env
+  value     = data.tfe_variables.aws-doormat-variables.env
+  sensitive = true
 }
