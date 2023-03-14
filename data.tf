@@ -11,6 +11,7 @@ data "tfe_workspace" "aws-doormat-workspace" {
 data "tfe_variables" "aws-doormat-variables" {
   workspace_id = var.aws-doormat-workspace-id
 }
+
 locals {
-  access_key         = jsondecode(data.tfe_variables.aws-doormat-variables.outputs.value)["AWS_ACCESS_KEY_ID"]
+  access_key         = jsondecode(data.tfe_variables.aws-doormat-variables.values.variables)["AWS_ACCESS_KEY_ID"]
 }
