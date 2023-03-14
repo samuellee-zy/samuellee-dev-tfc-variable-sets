@@ -11,10 +11,6 @@ data "tfe_workspace" "aws-doormat-workspace" {
 data "tfe_variables" "aws-doormat-variables" {
   workspace_id = var.aws-doormat-workspace-id
 }
-
 locals {
-  access_key         = try(data.tfe_variables.aws-doormat-variables[var.aws-doormat-workspace-id]["AWS_ACCESS_KEY_ID"].value, "Test")
-  secret_key         = try(data.tfe_variables.aws-doormat-variables[var.aws-doormat-workspace-id]["AWS_SECRET_ACCESS_KEY"].value, null)
-  session_token      = try(data.tfe_variables.aws-doormat-variables[var.aws-doormat-workspace-id]["AWS_SESSION_TOKEN"].value, null)
-  session_expiration = try(data.tfe_variables.aws-doormat-variables[var.aws-doormat-workspace-id]["AWS_SESSION_EXPIRATION"].value, null)
+  access_key         = jsondecode(data.tfe_variables.aws-doormat-variables.outputs.value)["AWS_ACCESS_KEY_ID"]
 }
