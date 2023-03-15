@@ -23,3 +23,12 @@ resource "tfe_variable" "user-api-token" {
   sensitive       = true
   variable_set_id = tfe_variable_set.samuellee-dev-tfe-token.id
 }
+
+resource "tfe_variable" "github-personal-token" {
+  key             = "Oauth_Token"
+  value           = "INSERT API TOKEN HERE"
+  category        = "terraform"
+  description     = "Github Personal Token"
+  sensitive       = true
+  variable_set_id = tfe_variable_set.samuellee-dev-github-token.id
+}

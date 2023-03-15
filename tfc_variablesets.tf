@@ -10,5 +10,11 @@ resource "tfe_variable_set" "samuellee-dev-tfe-token" {
   organization = data.tfe_outputs.samuellee-dev-project-outputs.values.tfc_org_name
 }
 
+resource "tfe_variable_set" "samuellee-dev-github-token" {
+  name         = "samuellee-dev github API token"
+  description  = "Personal token for github"
+  organization = data.tfe_outputs.samuellee-dev-project-outputs.values.tfc_org_name
+}
+
 
 
