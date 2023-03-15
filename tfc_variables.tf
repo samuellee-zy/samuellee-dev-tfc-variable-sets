@@ -25,7 +25,7 @@ resource "tfe_variable" "user-api-token" {
 }
 
 resource "tfe_variable" "github-personal-token" {
-  key             = "Oauth_Token"
+  key             = "GITHUB_TOKEN"
   value           = "INSERT API TOKEN HERE"
   category        = "terraform"
   description     = "Github Personal Token"
