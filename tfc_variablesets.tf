@@ -16,5 +16,10 @@ resource "tfe_variable_set" "samuellee-dev-github-token" {
   organization = data.tfe_outputs.samuellee-dev-project-outputs.values.tfc_org_name
 }
 
+resource "tfe_variable_set" "samuellee-dev-hcp-iam" {
+  name = "samuellee-dev HCP Client ID and Client Secret"
+  description = "Demo Org Client ID and Client Secret"
+  organization = data.tfe_outputs.samuellee-dev-project-outputs.values.tfc_org_name
+}
 
 

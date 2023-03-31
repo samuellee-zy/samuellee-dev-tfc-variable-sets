@@ -32,3 +32,21 @@ resource "tfe_variable" "github-personal-token" {
   sensitive       = true
   variable_set_id = tfe_variable_set.samuellee-dev-github-token.id
 }
+
+resource "tfe_variable" "hcp-client-id" {
+  key = "HCP_CLIENT_ID"
+  value = "INSERT CLIENT ID HERE"
+  category = "env"
+  description = "HCP Demo org Client ID"
+  sensitive = false
+  variable_set_id = tfe_variable_set.samuellee-dev-hcp-iam.id
+}
+
+resource "tfe_variable" "hcp-client-secret" {
+  key = "HCP_CLIENT_SECRET"
+  value = "INSERT CLIENT SECRET HERE"
+  category = "env"
+  description = "HCP Demo org Client SECRET"
+  sensitive = true
+  variable_set_id = tfe_variable_set.samuellee-dev-hcp-iam.id
+}
