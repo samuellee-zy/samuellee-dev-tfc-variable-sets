@@ -8,6 +8,7 @@ resource "tfe_variable_set" "samuellee-dev-tfe-token" {
   name         = "samuellee-dev tfc API token"
   description  = "Variable set containing TFE token"
   organization = var.orgName
+  global       = true
 }
 
 resource "tfe_variable_set" "samuellee-dev-github-token" {
@@ -17,8 +18,8 @@ resource "tfe_variable_set" "samuellee-dev-github-token" {
 }
 
 resource "tfe_variable_set" "samuellee-dev-hcp-iam" {
-  name = "samuellee-dev HCP Client ID and Client Secret"
-  description = "Demo Org Client ID and Client Secret"
+  name         = "samuellee-dev HCP Client ID and Client Secret"
+  description  = "Demo Org Client ID and Client Secret"
   organization = var.orgName
 }
 
